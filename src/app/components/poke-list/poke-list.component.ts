@@ -10,6 +10,7 @@ import { PokeListService } from 'src/app/services/poke-list.service';
 })
 export class PokeListComponent implements OnInit {
   pokeList: PokemItem[]=[];
+  
   constructor(private service: PokeListService) { }
 
   ngOnInit(): void {

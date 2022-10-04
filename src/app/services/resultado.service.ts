@@ -14,6 +14,7 @@ export class ResultadoService {
 
   sumar(valor: number): void{
     this.resultado = this.resultado + valor;
+    
     this.resultado$.next(this.resultado);
   }
 

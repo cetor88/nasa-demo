@@ -10,7 +10,7 @@ export class HijoComponent implements OnInit {
   valorHeredadoFooter: number=0;
 
   
-  @Input() resultado: number = 0;
+  @Input() resultadoHeredado: number = 0;
   @Output() emitir: EventEmitter<number> = new EventEmitter();
 
   constructor() { }
@@ -19,8 +19,8 @@ export class HijoComponent implements OnInit {
   }
 
   restar(): void{
-    this.resultado= this.resultado -1;
-    this.emitir.emit(this.resultado);
+    this.resultadoHeredado= this.resultadoHeredado -1;
+    this.emitir.emit(this.resultadoHeredado);
   }
 
 }

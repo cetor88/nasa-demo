@@ -12,10 +12,11 @@ export class ServiceParentComponent implements OnInit {
   constructor(private appService: ResultadoService) { }
 
   ngOnInit(): void {
-    this.appService.currentApprovalStageMessage.subscribe(resul => this.resultado = resul);
+    this.appService.currentApprovalStageMessage.subscribe(( resul: number ) =>{
+      return this.resultado = resul 
+    });
   }
-
-
+  
   public suma(val2: number = 2){
      //this.resultado =  this.resultado + val2
      this.appService.sumar(val2);

@@ -13,11 +13,12 @@ export class ServiceChildComponent implements OnInit {
 
   ngOnInit(): void {
     //.pipe(take(1))
-    this.appService.currentApprovalStageMessage.subscribe(resul => this.resultado = resul);
+    this.appService.currentApprovalStageMessage.pipe(take(3)).subscribe(resul => this.resultado = resul);
   }
 
   resta(valor:number):void{
     this.appService.restar(valor);
+    this.appService.currentApprovalStageMessage.pipe(take(3)).subscribe(resul => this.resultado = resul);
   }
 
 }

@@ -14,7 +14,7 @@ export class InputOutputComponent implements OnInit {
   }
 
 
-  public suma(val2: number = 2){
+  public suma(val2: number){
      this.resultado =  this.resultado + val2
   }
 
