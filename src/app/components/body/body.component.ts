@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-body',
@@ -7,9 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
   
-  valorHeredado: number = 0;
-
-  @Input() resultado: number = 0;
   constructor() { }
 
   ngOnInit(): void {

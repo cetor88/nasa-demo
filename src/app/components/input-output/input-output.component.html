@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-4">
+      <h1>input-output componente</h1>
+      
+    </div>
+    <div class="col-4">
+      <h1>
+        <span> {{resultado}}</span>
+      </h1>
+    </div>
+    <div class="col-2">
+      <button type="button" class="btn btn-primary" (click)="suma()">Sumar</button>
+    </div>   
+</div>
+
+  <app-hijo [resultado]="resultado" (emitir)="recibirFooter($event)"></app-hijo>
