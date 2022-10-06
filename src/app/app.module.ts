@@ -17,6 +17,8 @@ import { PokeListService } from './services/poke-list.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PokeListComponent } from './components/poke-list/poke-list.component';
 import { PokeDetailComponent } from './components/poke-list/poke-detail/poke-detail.component';
+import { AlumnoComponent } from './components/alumno/alumno.component';
+import { AlumnoService } from './services/alumno.service';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { PokeDetailComponent } from './components/poke-list/poke-detail/poke-det
     ServiceParentComponent,
     ServiceChildComponent,
     PokeListComponent,
-    PokeDetailComponent
+    PokeDetailComponent,
+    AlumnoComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,7 @@ import { PokeDetailComponent } from './components/poke-list/poke-detail/poke-det
     NgbModule, 
     HttpClientModule
   ],
-  providers: [ResultadoService, PokeListService],
+  providers: [ResultadoService, PokeListService, AlumnoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
